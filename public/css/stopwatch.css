@@ -1,0 +1,134 @@
+.stopwatch-container{
+    width: 100%;
+    display: flex;
+    background-color: #ff6943;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.stopwatch-container .stopwatch{
+    aspect-ratio: 1;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vh;
+    margin: 20px 0;
+    padding: 20px;
+    border: 8px solid rgba(255, 255, 255, 0.646);
+}
+
+.stopwatch-container .stopwatch .stopwatch-time{
+    display: flex;
+}
+
+.blink-animate{
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink{
+    to{
+        visibility: hidden;
+    }
+}
+
+.stopwatch-container .stopwatch #hr, .stopwatch-container .stopwatch #min, .stopwatch-container .stopwatch #sec{
+    width: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatch-container .stopwatch #mls{
+    width: 62px;
+}
+
+.stopwatch-container .stopwatch-btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ff6943;
+}
+
+.stopwatch-container .stopwatch-btns .play_pause_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3300;
+    border-radius: 100vh;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.stopwatch-container .stopwatch-btns .play_pause_btn:hover{
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+.stopwatch-container .stopwatch-btns .play_pause_btn img{
+    width: 38px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(83deg) brightness(115%) contrast(104%);
+}
+
+.stopwatch-container .stopwatch-btns .reset_btn, .stopwatch-container .stopwatch-btns .lap_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vh;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.stopwatch-container .stopwatch-btns .reset_btn:hover, .stopwatch-container .stopwatch-btns .lap_btn:hover{
+    background-color: #00000032;
+    transition: background-color 0.3s;
+}
+
+.stopwatch-container .stopwatch-btns .reset_btn img, .stopwatch-container .stopwatch-btns .lap_btn img{
+    width: 35px;
+}
+
+.stopwatch-container .stopwatch-btns .lap_btn img{
+    width: 32px;
+}
+
+.laps-container{
+    width: 100%;
+    background-color: #ff6943;
+}
+
+.laps-container .laps{
+    border-bottom: 0.5px solid #0005;
+    display: flex;
+    background-color: #FE5327;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    color: white;
+    padding: 20px 0;
+}
+
+.laps-container .laps:first-child{
+    border-top: 0.5px solid #0005;
+}
+
+.laps-container .laps .sno{
+    color: #000;
+}
+
+@media(max-height: 420px) {
+    .stopwatch-container .stopwatch{
+        font-size: 30px;
+        padding: 10px;
+        border: 7px solid rgba(255, 255, 255, 0.646);
+    }
+
+    .stopwatch-container .stopwatch #mls{
+        width: 42px;
+    }
+}

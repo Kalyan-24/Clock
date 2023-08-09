@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="./css/main/style.css">
+    <link rel="stylesheet" href="./css/alarm.css">
+    <link rel="stylesheet" href="./css/partials/switch.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    <div class="container">
+        <h1 class="title">Alarm</h1>
+    </div>
+
+    <div class="welcome" style="display: flex;">
+        <p>Welcome</p>
+        <button>Close</button>
+    </div>
+
+    <div class="alarm-container">
+        <h1 class="alarm-title">Alarm</h1>
+        <p class="alarm-time"><span>00</span>:<span>00</span><span class="alarm-AMPM">AM</span></p>
+        <div class="alarm-snooze-stop-btns">
+            <button id="snooze-alarm-btn">Snooze</button>
+            <button id="stop-alarm-btn">Stop</button>
+        </div>
+    </div>
+
+
+    <div class="set-alarm-container" style="display: none;">
+        <div class="nav-bar">
+            <img src="./assets/images/back_icon.svg" alt="">
+            <h3>Set Alarm</h3>
+        </div>
+
+        <div class="time-picker-container">
+            <div class="time-picker">
+                <select name="hour" class="time-picker-select">
+                </select>
+                <span>:</span>
+                <select name="minute" class="time-picker-select">
+                </select>
+                <select name="meridian" class="time-picker-select">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+
+            <input type="text" name="label" id="label" placeholder="Label">
+
+            <button id="save-btn" type="submit">Save</button>
+            <button id="update-btn" type="submit" style="display: none;">Update</button>
+        </div>
+    </div>
+
+    <div class="delete-container" style="display: none;">
+        <p>Are you sure you want to delete this Alarm?</p>
+        <div>
+            <button id="cancel">Cancel</button>
+            <button id="delete">Delete</button>
+        </div>
+    </div>
+
+
+    <span class="new-alarm">
+        <img src="./assets/images/new_alarm_icon.svg" alt="">
+    </span>
+
+    <script src="./js/alarm.js"></script>
+</body>
+
+</html>

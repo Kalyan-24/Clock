@@ -1,0 +1,457 @@
+.new-alarm {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background-color: #ff3300;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    box-shadow: 0px 17px 17px -10px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
+.new-alarm:hover {
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+.new-alarm img {
+    width: 55%;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(83deg) brightness(115%) contrast(104%);
+
+}
+
+.set-alarm-container {
+    width: 61%;
+    height: 70%;
+    border-radius: 10px;
+    position: fixed;
+    transform: translateY(25%);
+    display: none;
+    background-color: #222;
+    z-index: 2;
+    color: #fff;
+    box-shadow: 0px 17px 17px -10px rgba(0, 0, 0, 0.4);
+}
+
+.welcome{
+    font-size: 35px;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 25%;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(150%);
+    background-color: #222;
+    z-index: 2;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 17px 17px -10px rgba(0, 0, 0, 0.4);
+}
+
+.welcome button{
+    background-color: #ff3300;
+    font-size: 18px;
+    padding: 5px 25px;
+    border: none;
+    outline: none;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
+
+}
+
+.welcome button:hover{
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+.set-alarm-container .nav-bar {
+    width: 100%;
+    height: 15%;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    border-bottom: 0.5px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.set-alarm-container .nav-bar img {
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(83deg) brightness(115%) contrast(104%);
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.set-alarm-container .nav-bar img:hover {
+    background-color: #00000032;
+}
+
+.set-alarm-container .nav-bar h3 {
+    font-size: 22px;
+    color: white;
+}
+
+.set-alarm-container .time-picker-container input {
+    width: 50%;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.set-alarm-container .time-picker-container .time-picker {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    place-items: center;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 6px;
+}
+
+.set-alarm-container .time-picker-container .time-picker .time-picker-select {  
+    font-size: 60px;
+    font-weight: 700;
+    width: 32%;
+    height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    text-align: center;
+    border: 1px solid #111;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+}
+
+.set-alarm-container .time-picker-container .time-picker .time-picker-select:last-child {
+    margin-left: 10px;
+}
+
+.set-alarm-container .time-picker-container .time-picker span {
+    padding: 6px 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.set-alarm-container .time-picker-container{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.set-alarm-container .time-picker-container button{
+    background-color: #ff3300;
+    font-size: 22px;
+    padding: 5px 25px;
+    border: none;
+    outline: none;
+    border-radius: 100vh;
+    cursor: pointer;
+}
+
+.set-alarm-container .time-picker-container button:hover{
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+.container{
+    opacity: 0.5;
+}
+
+.alarms{
+    width: 100%;
+    height: 100%;
+}
+
+.alarm-holder{
+    width: 100%;
+    height: 100px;
+    background-color: #FE5327;
+    border-bottom: 0.5px solid #0005;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.alarm{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.alarm-holder span{
+    padding: 9px;
+    display: grid;
+    place-items: center;
+    border-radius: 100vh;
+}
+
+.alarm-holder:first-child{
+    border-top: 0.5px solid #0005;
+}
+
+.alarm-holder span:hover{
+    background-color: #00000032;
+    transition: background-color 0.3s;
+}
+
+.alarm-holder span img{
+    width: 32px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(83deg) brightness(115%) contrast(104%);
+    cursor: pointer;
+    
+}
+
+.alarm .alarm-label{
+    font-weight: 300;
+}
+
+.alarm .off{
+    color: #0008;
+}
+
+.alarm-container{
+    font-size: 35px;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 45%;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(60%);
+    background-color: #222;
+    z-index: 2;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0px 17px 17px -10px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.alarm-container h1{
+    font-size: 24px;
+    font-weight: 300;
+    color: #ff3300;
+}
+
+.alarm-container p{
+    font-weight: 500;
+    font-size: 60px;
+    color: #2A9DF4;
+}
+
+.alarm-container p .alarm-AMPM{
+    margin-left: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.alarm-container .alarm-snooze-stop-btns{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.alarm-container .alarm-snooze-stop-btns button{
+    background-color: #ff3300;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 25px;
+    border: none;
+    outline: none;
+    border-radius: 100vh;
+    cursor: pointer;
+    color: white;
+}
+
+.alarm-container .alarm-snooze-stop-btns button:hover{
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+.delete-container{
+    height: 25%;
+    width: 30%;
+    font-size: 20px;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(150%);
+    background-color: #222;
+    z-index: 2;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: none;
+    box-shadow: 0px 17px 17px -10px rgba(0, 0, 0, 0.4);
+}
+
+.delete-container div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.delete-container button{
+    background-color: #ff3300;
+    font-size: 18px;
+    padding: 5px 25px;
+    border: none;
+    outline: none;
+    border-radius: 100vh;
+    color: white;
+    cursor: pointer;
+    margin-right:15px;
+}
+
+.delete-container #cancel{
+    margin-right: 0px;
+    background-color: transparent;
+}
+
+.delete-container #delete:hover{
+    background-color: #FE5327;
+    transition: background-color 0.3s;
+}
+
+@media(max-width: 870px) {
+    .set-alarm-container .time-picker-container .time-picker .time-picker-select {
+        font-size: 30px;
+    }
+
+    .set-alarm-container .time-picker-container .time-picker span {
+        font-size: 25px;
+    }
+
+    .set-alarm-container .time-picker-container .time-picker {
+        aspect-ratio: 3;
+    }
+
+    .set-alarm-container .time-picker-container input {
+        width: 85%;
+    }
+}
+
+
+@media(max-width: 770px) {
+    .set-alarm-container {
+        width: 90%;
+    }
+
+    .welcome, .alarm-container, .delete-container{
+        width: 90%;
+    }
+}
+
+
+@media(max-height: 420px){
+    .welcome{
+        width: 40%;
+        height: 50%;
+        transform: translateY(65%);
+    }
+
+    .set-alarm-container {
+        transform: translateY(25%);
+    }
+
+    .set-alarm-container .time-picker-container{
+        height: 80%;
+
+    }
+
+    .set-alarm-container .time-picker-container .time-picker {
+        width: 50%;
+        height: 30%;
+        aspect-ratio: 2;
+        padding: 5px;
+    }
+
+    .set-alarm-container .time-picker-container .time-picker .time-picker-select{
+        font-size: 20px;
+    }
+
+    .set-alarm-container .time-picker-container .time-picker span {
+        font-size: 17px;
+    }
+
+    .set-alarm-container .time-picker-container input {
+        width: 85%;
+    }
+
+    .set-alarm-container .nav-bar {
+        height: 20%;
+    }
+
+    .set-alarm-container .nav-bar h3{
+        font-size: 18px;
+    }
+
+    .set-alarm-container .nav-bar img {
+        width: 30px;
+    }
+
+    .set-alarm-container .time-picker-container input {
+        font-size: 15px;
+        padding: 5px 10px;
+        width: 50%;
+        border-radius: 4px;
+    }
+
+    .set-alarm-container .time-picker-container button{
+        font-size: 17px;
+        padding: 5px 25px;
+        border: none;
+        outline: none;
+        border-radius: 100vh;
+        cursor: pointer;
+    }
+
+    .alarm-container{
+        width: 50%;
+        height: 70%;
+        transform: translateY(27.5%);
+    }
+
+    .alarm-holder{
+        height: 75px;
+    }
+}

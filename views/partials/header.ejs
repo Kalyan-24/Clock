@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/"><img src="./assets/images/clock_icon.svg" alt="">Clock</a></li>
+                <li><a href="/alarm"><img src="./assets/images/alarm_icon.svg" alt="">Alarm</a></li>
+                <li><a href="/world-clock"><img src="./assets/images/world_clock_icon.svg" alt="">World Clock</a></li>
+                <li><a href="/timer"><img src="./assets/images/timer_icon.svg" alt="">Timer</a></li>
+                <li><a href="/stopwatch"><img src="./assets/images/stopwatch_icon.svg" alt="">Stopwatch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const links = document.querySelectorAll('a')
+        const link = document.getElementById('a')
+    
+        if (window.location.pathname === '/') {
+            links[0].classList.add('active')
+            links[1].classList.remove('active')
+            links[2].classList.remove('active')
+            links[3].classList.remove('active')
+            links[4].classList.remove('active')
+        }
+    
+        else if (window.location.pathname === '/alarm') {
+            links[0].classList.remove('active')
+            links[1].classList.add('active')
+            links[2].classList.remove('active')
+            links[3].classList.remove('active')
+            links[4].classList.remove('active')
+        }
+    
+        else if (window.location.pathname === '/world-clock') {
+            links[0].classList.remove('active')
+            links[1].classList.remove('active')
+            links[2].classList.add('active')
+            links[3].classList.remove('active')
+            links[4].classList.remove('active')
+        }
+    
+        else if (window.location.pathname === '/timer') {
+            links[0].classList.remove('active')
+            links[1].classList.remove('active')
+            links[2].classList.remove('active')
+            links[3].classList.add('active')
+            links[4].classList.remove('active')
+        }
+    
+        else if (window.location.pathname === '/stopwatch') {
+            links[0].classList.remove('active')
+            links[1].classList.remove('active')
+            links[2].classList.remove('active')
+            links[3].classList.remove('active')
+            links[4].classList.add('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="./css/main/style.css">
+    <link rel="stylesheet" href="./css/clock.css">
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <h1 class="title">Clock</h1>
+
+        <div class="clock">
+            <div class="analogClock">
+                <div style="--i:1;" class="numContainer">
+                    <div class="numbers">1</div>
+                </div>
+                <div style="--i:2;" class="numContainer">
+                    <div class="numbers">2</div>
+                </div>
+                <div style="--i:3;" class="numContainer">
+                    <div class="numbers">3</div>
+                </div>
+                <div style="--i:4;" class="numContainer">
+                    <div class="numbers">4</div>
+                </div>
+                <div style="--i:5;" class="numContainer">
+                    <div class="numbers">5</div>
+                </div>
+                <div style="--i:6;" class="numContainer">
+                    <div class="numbers">6</div>
+                </div>
+                <div style="--i:7;" class="numContainer">
+                    <div class="numbers">7</div>
+                </div>
+                <div style="--i:8;" class="numContainer">
+                    <div class="numbers">8</div>
+                </div>
+                <div style="--i:9;" class="numContainer">
+                    <div class="numbers">9</div>
+                </div>
+                <div style="--i:10;" class="numContainer">
+                    <div class="numbers">10</div>
+                </div>
+                <div style="--i:11;" class="numContainer">
+                    <div class="numbers">11</div>
+                </div>
+                <div style="--i:12;" class="numContainer">
+                    <div class="numbers">12</div>
+                </div>
+    
+                <div class="hands hr"></div>
+                <div class="hands min"></div>
+                <div class="hands sec"></div>
+            </div>
+    
+            <div class="digitalClock">
+                <div class="dig digitalHr">00</div>
+                <div class="dig divider">:</div>
+                <div class="dig digitalMin">00</div>
+                <div class="dig divider">:</div>
+                <div class="dig digitalSec">00</div>
+                <div class="dig digitalAMPM">AM</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/clock.js"></script>
+</body>
+
+</html>

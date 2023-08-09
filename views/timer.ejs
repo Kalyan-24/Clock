@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="./css/main/style.css">
+    <link rel="stylesheet" href="./css/timer.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <div class="welcome" style="display: flex;">
+        <p>Welcome</p>
+        <button>Close</button>
+    </div>
+
+    <div class="container">
+        <h1 class="title">Timer</h1>
+
+        <div class="timer-container">
+
+        </div>
+
+
+    </div>
+
+    <div class="time-up-container" style="display: none;">
+        <h1>Time's Up</h1>
+        <p class="time-up-time"></p>
+        <div class="timer-stop-addMin-btns">
+            <button id="stop-timer-btn">Stop</button>
+            <button id="add-1-min-btn">Add 1 Minute</button>
+        </div>
+    </div>
+
+    <div class="set-timer-container" style="display: none;">
+        <div class="nav-bar">
+            <img id="back" src="./assets/images/back_icon.svg" alt="">
+            <h3>Set Timer</h3>
+        </div>
+
+        <div class="main">
+            <div class="set-timer-time">
+                <span style="color: rgb(254, 83, 39); cursor: pointer;" id="hr">00</span>:
+                <span style="color: rgb(254, 83, 39); cursor: pointer;" id="min">00</span>:
+                <span style="color: rgb(254, 83, 39); cursor: pointer;" id="sec">00</span>
+            </div>
+
+            <div class="numbers-container">
+                <div class="numbers">
+                    <div class="nums" id="num-1">1</div>
+                    <div class="nums" id="num-2">2</div>
+                    <div class="nums" id="num-3">3</div>
+                    <div class="nums" id="num-4">4</div>
+                    <div class="nums" id="num-5">5</div>
+                    <div class="nums" id="num-6">6</div>
+                    <div class="nums" id="num-7">7</div>
+                    <div class="nums" id="num-8">8</div>
+                    <div class="nums" id="num-9">9</div>
+                    <div class="nums" id="num-0">0</div>
+                    <div class="backspace" id="backspace">
+                        <img src="./assets/images/backspace_icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="start-timer">
+                <div class="button">
+                    <img src="./assets/images/play_icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="delete-container" style="display: none;">
+        <p>Are you sure you want to delete this Alarm?</p>
+        <div>
+            <button id="cancel">Cancel</button>
+            <button id="delete">Delete</button>
+        </div>
+    </div>
+
+    <span class="new-timer">
+        <img src="./assets/images/new_alarm_icon.svg" alt="">
+    </span>
+
+    <script src="./js/timer.js"></script>
+</body>
+</html>

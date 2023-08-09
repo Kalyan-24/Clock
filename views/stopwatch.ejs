@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./css/main/style.css">
+    <link rel="stylesheet" href="./css/stopwatch.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <h1 class="title">Stopwatch</h1>
+
+        <div class="stopwatch-container">
+            <div class="stopwatch">
+                <div class="stopwatch-time">
+                    <div id="hr">00</div>:
+                    <div id="min">00</div>:
+                    <div id="sec">00</div>.
+                    <div id="mls">00</div>
+                </div>
+            </div>
+
+            <div class="stopwatch-btns">
+                <span class="reset_btn">
+                    <img src="./assets/images/reset_icon.svg" alt="">
+                </span>
+                <span class="play_pause_btn">
+                    <img src="./assets/images/play_icon.svg" alt="">
+                </span>
+                <span class="lap_btn">
+                    <img src="./assets/images/flag_icon.svg" alt="">
+                </span>
+            </div>
+
+        </div>
+
+        <div class="laps-container">
+
+        </div>
+    </div>
+
+    <script src="./js/stopwatch.js"></script>
+</body>
+</html>

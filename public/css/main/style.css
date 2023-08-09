@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+body{
+    background-color: #000000e6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    color: #FFF;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+header, header nav{
+    width: 100%;
+    height: 90px;
+    background-color: #FE5327;
+    z-index: 10;
+}
+
+header nav ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #fff7;
+    letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 30px;
+    border-radius: 4px;
+}
+
+header nav ul li a:hover{
+    background-color: #ff6943;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a img{
+    width: 25px;
+    filter: invert(75%) sepia(28%) saturate(1039%) hue-rotate(313deg) brightness(102%) contrast(99%);
+}
+
+.active{
+    color: #FFF;
+    background-color: #ff6943;
+}
+
+.active > img{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(83deg) brightness(115%) contrast(104%);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ff6943;
+}
+
+@media(max-width: 770px){
+    header, header nav{
+        height: 70px;
+    }
+    header nav ul{
+        font-size: 11px;
+    }
+    header nav ul li a{
+        padding: 3px 10px;
+    }
+    header nav ul li a img{
+        width: 20px;
+    }
+}
+
+@media(max-height: 420px){
+    header, header nav{
+        height: 50px;
+    }
+    header nav ul{
+        font-size: 10px;
+    }
+    header nav ul li a{
+        padding: 3px 20px;
+    }
+    header nav ul li a img{
+        width: 14px;
+    }
+}

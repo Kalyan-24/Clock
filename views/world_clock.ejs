@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="./css/main/style.css">
+    <link rel="stylesheet" href="./css/world_clock.css">
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+        <h1 class="title">World Clock</h1>
+
+        <span id="date-info"></span>
+        <div id="current-time">
+            <div class="clock">
+                <div class="analogClock">
+                    <div style="--i:1;" class="numContainer">
+                        <div class="numbers">1</div>
+                    </div>
+                    <div style="--i:2;" class="numContainer">
+                        <div class="numbers">2</div>
+                    </div>
+                    <div style="--i:3;" class="numContainer">
+                        <div class="numbers">3</div>
+                    </div>
+                    <div style="--i:4;" class="numContainer">
+                        <div class="numbers">4</div>
+                    </div>
+                    <div style="--i:5;" class="numContainer">
+                        <div class="numbers">5</div>
+                    </div>
+                    <div style="--i:6;" class="numContainer">
+                        <div class="numbers">6</div>
+                    </div>
+                    <div style="--i:7;" class="numContainer">
+                        <div class="numbers">7</div>
+                    </div>
+                    <div style="--i:8;" class="numContainer">
+                        <div class="numbers">8</div>
+                    </div>
+                    <div style="--i:9;" class="numContainer">
+                        <div class="numbers">9</div>
+                    </div>
+                    <div style="--i:10;" class="numContainer">
+                        <div class="numbers">10</div>
+                    </div>
+                    <div style="--i:11;" class="numContainer">
+                        <div class="numbers">11</div>
+                    </div>
+                    <div style="--i:12;" class="numContainer">
+                        <div class="numbers">12</div>
+                    </div>
+        
+                    <div class="hands hr"></div>
+                    <div class="hands min"></div>
+                    <div class="hands sec"></div>
+                </div>
+        
+                <div class="digitalClock">
+                    <div class="dig digitalHr">00</div>
+                    <div class="dig divider">:</div>
+                    <div class="dig digitalMin">00</div>
+                    <div class="dig divider">:</div>
+                    <div class="dig digitalSec">00</div>
+                    <div class="dig digitalAMPM">AM</div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="world-clocks">
+            
+        </div>
+
+    </div>
+    
+    <div class="search-city">
+        <div class="nav-bar">
+            <img id="back" src="./assets/images/back_icon.svg" alt="">
+            <h3 id="add-city">Add City</h3>
+            <div id="search-container">
+                <input type="text">
+                <img id="search" src="./assets/images/search_icon.svg" alt="">
+            </div>
+        </div>
+
+        <div class="cities">
+            
+        </div>
+    </div>
+
+    <div class="delete-container" style="display: none;">
+        <p>Are you sure you want to delete this Clock?</p>
+        <div>
+            <button id="cancel">Cancel</button>
+            <button id="delete">Delete</button>
+        </div>
+    </div>
+
+    <span id="add-world-clock-btn">
+        <img src="./assets/images/world_clock_icon.svg" alt="">
+    </span>
+        
+    <script src="./js/world_clock.js"></script>
+    <script src="./js/clock.js"></script>
+</body>
+</html>
+
+
+
+    
